@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StatusBar, SafeAreaView, Platform } from "react-native";
 import Flex1 from "./components/01-flex/flex1";
 import Flex2 from "./components/01-flex/flex2";
 import Flex3 from "./components/01-flex/flex3";
@@ -17,16 +17,28 @@ import PractiseView from "./components/05-practise-view/practise-view";
 import PractiseScrollView from "./components/06-practise-scrollview/practise-scrollview";
 import PractiseFlatList from "./components/07-practise-flatlist/practise-flatlist";
 import FlatListComp from "./components/08-practise-flatlist-component/flatlist-comp";
+import BackgroundImage from "./components/09-images/Background";
+import ExternalImage from "./components/09-images/ExternalImage";
+import Icon from "./components/09-images/Icon";
+import LocalImportImage from "./components/09-images/LocalImportImage";
+import LocalRequireImage from "./components/09-images/LocalImportImageRequire";
+import Presble from "./components/10-buttons/Pressable";
+import Pressable from "./components/10-buttons/Pressable";
+import Touchables from "./components/10-buttons/Touchables";
 //import Practise1 from "./components/03-practise-flexbox/practise1";
 
 const App = () => {
   return (
-    <View
+    <SafeAreaView
       style={{
         flex: 1,
+        backgroundColor:"#0CECDD",
+       
       }}
     >
       {/*       
+
+// paddingTop: Platform.OS ==="android" ? StatusBar.currentHeight : 0;
 <Flex1/>
 <Flex2/>
 <Flex3/>
@@ -44,9 +56,17 @@ const App = () => {
 <PractiseView/>
 <PractiseScrollView/>
 <PractiseFlatList/>
+<FlatListComp/>
+<ExternalImage/>
+  <LocalImportImage/>
+     <LocalRequireImage/>
+      <BackgroundImage/>
+       <Icon/>
+       <Touchables/>
  */}
-      <FlatListComp/>
-    </View>
+     <Presble/>
+      <StatusBar backgroundColor="#247881" barStyle="light-content"/>
+    </SafeAreaView>
   );
 };
 
